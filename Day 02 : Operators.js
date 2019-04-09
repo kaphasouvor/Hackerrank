@@ -22,18 +22,22 @@ function readLine() {
     return inputString[currentLine++];
 }
 
+//_____________________________Solution___________________
 // Complete the solve function below.
 function solve(meal_cost, tip_percent, tax_percent) {
-    var tip = meal_cost * tip_percent / 100;
-    var tax = meal_cost * tip_percent / 100;
-    var total = Math.round(meal_cost + tip + tax);
+    var tipCost = meal_cost * tip_percent / 100;
+    var taxCost = meal_cost * tax_percent / 100;
+    var totalCost = Math.round(meal_cost + tipCost + taxCost);
 
-    console.log("The total meal cost is " + total + " dollars.");
+    console.log(totalCost);
 }
+//_________________________________________________________
 
 function main() {
     const meal_cost = parseFloat(readLine());
+
     const tip_percent = parseInt(readLine(), 10);
+
     const tax_percent = parseInt(readLine(), 10);
 
     solve(meal_cost, tip_percent, tax_percent);
